@@ -1,0 +1,10 @@
+<div>
+  <table class="table table-striped w-auto" style="margin-left: 40%;margin-top:5%;text-align: center; text-transform: capitalize">
+    <tr *ngFor="let key of keys">
+      <td style="background-color:skyblue">{{key}}</td>
+      <td>:</td>
+      <td>{{products[key]}}</td>
+    </tr>
+  </table>
+  <button class="back" routerLink='/products'>Back</button>
+</div>

@@ -1,0 +1,14 @@
+<div>
+  <table class="table table-striped w-auto" style="margin-left: 40%;margin-top:5%;text-align: center; text-transform: capitalize"> 
+    <tr>
+      <th  class="table-info" style="background-color: chocolate;color: white"  *ngFor="let key of keys">{{key}}</th>
+    </tr>
+    <tr *ngFor="let product of products">
+      <td *ngFor="let key of keys">
+        <a *ngIf="key == keys[0];else elseBlock" routerLink="{{product[key]}}">{{product[key]}}</a>
+        <ng-template #elseBlock>{{product[key]}}</ng-template>
+      </td>
+    </tr>
+  </table>
+</div>
+<router-outlet></router-outlet>
